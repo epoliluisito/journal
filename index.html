@@ -55,7 +55,7 @@
       white-space:nowrap;
       transition:color .18s ease;
     }
-    .nav a:hover,.nav a.is-active{color:var(--nav-active)}
+    .nav a:hover,.nav a.is-active{color:var(--nav-active) !important}
 
     .nav-toggle{
       display:none;
@@ -88,7 +88,7 @@
       font-size:12px;letter-spacing:var(--nav-track);text-transform:uppercase;
       color:var(--nav);text-decoration:none;
     }
-    .nav-panel a.is-active{color:var(--nav-active)}
+    .nav-panel a:hover,.nav-panel a.is-active{color:var(--nav-active) !important}
     .nav-panel__close{
       position:fixed;top:18px;right:18px;z-index:10001;
       border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.25);color:#fff;
@@ -1962,6 +1962,7 @@
 <a data-key="about" href="https://www.enricopoli.com/about">ABOUT</a>
 </aside><script>
     (function(){
+      document.querySelectorAll('.nav a.is-active, .nav-panel a.is-active').forEach(a => a.classList.remove('is-active'));
       document.querySelectorAll('[data-key="journal"]').forEach(a => a.classList.add('is-active'));
       const t = document.getElementById('navToggle');
       const p = document.getElementById('navPanel');
