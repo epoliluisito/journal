@@ -294,6 +294,21 @@
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
+
+    /* --- JOURNAL: remove gaps between image blocks (override Squarespace defaults) --- */
+    .sqs-layout .sqs-row{margin-left:-1px !important;margin-right:-1px !important;}
+    .sqs-layout [class*="sqs-col-"]{padding-left:1px !important;padding-right:1px !important;}
+    .sqs-layout .sqs-block{padding:0 !important;margin:0 !important;}
+    .sqs-layout .sqs-block-content{padding:0 !important;margin:0 !important;}
+    .sqs-layout .sqs-block-image,
+    .sqs-layout .image-block-outer-wrapper,
+    .sqs-layout .image-block-wrapper,
+    .sqs-layout .sqs-block-image-figure{margin:0 !important;}
+    .sqs-layout .sqs-block-image{padding:1px !important;}
+    .sqs-layout .image-block-wrapper{padding:0 !important;}
+    .sqs-layout .sqs-image-content,
+    .sqs-layout img{display:block;}
+
 </style>
 </link></head>
 <body>
