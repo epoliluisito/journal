@@ -20,9 +20,9 @@
   --hh:84px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;font-size:106%}
 body{margin:0;font-family:"Mulish",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--body);
-  background:var(--paper);line-height:1.78;-webkit-font-smoothing:antialiased;font-size:17px;overflow-x:hidden}
+  background:var(--paper);line-height:1.78;-webkit-font-smoothing:antialiased;font-size:1.06rem;overflow-x:hidden}
 h1,h2,h3,h4{margin:0;color:var(--ink);font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.14}
 p{margin:0 0 1.1rem}
 a{color:inherit;text-decoration:none}
@@ -72,10 +72,10 @@ img{max-width:100%;display:block}
 @keyframes loaderOut{to{opacity:0;visibility:hidden;transform:translateY(-2.5%)}}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:60;background:rgba(251,245,243,.85);
+.site-header{position:sticky;top:0;z-index:60;background:rgba(245,239,226,.92);
   backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:84px;width:100%;padding:0 clamp(20px,4vw,52px)}
-.brand img{height:52px;width:auto}
+.brand img{height:71px;width:auto;filter:drop-shadow(0 1px 2px rgba(62,42,49,.28))}
 .nav{display:flex;align-items:center}
 .nav>ul{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
 .nav a.top{display:block;padding:10px 15px;border-radius:9999px;font-size:.92rem;font-weight:500;color:var(--body);transition:.2s}
@@ -128,7 +128,7 @@ img{max-width:100%;display:block}
 .manifesto .quote{max-width:840px;margin:0 auto;font-family:"Fraunces",serif;font-weight:400;font-style:italic;
   font-size:clamp(1.4rem,3vw,2.15rem);line-height:1.4;color:var(--ink)}
 .manifesto .quote .hl{font-style:normal;color:var(--rose-deep)}
-.manifesto .mark-sep{width:46px;height:46px;margin:0 auto 30px;opacity:.9}
+.manifesto .mark-sep{width:auto;height:52px;max-width:72px;margin:0 auto 30px;opacity:.9}
 
 /* chi sono */
 .about{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
@@ -145,8 +145,7 @@ img{max-width:100%;display:block}
 .world{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
   padding:46px 42px;transition:transform .35s var(--ease),box-shadow .35s var(--ease);overflow:hidden}
 .world:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg)}
-.world .badge{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;background:var(--paper-2);margin-bottom:26px}
-.world .badge img{width:54px;height:54px;object-fit:contain}
+.world .w-rule{width:44px;height:2px;background:var(--gold);border-radius:2px;margin-bottom:24px}
 .world .label{font-family:"Mulish",sans-serif;text-transform:uppercase;letter-spacing:.26em;font-size:.68rem;font-weight:600;color:var(--rose-deep)}
 .world h3{font-size:1.75rem;font-weight:500;margin:8px 0 12px}
 .world>p{color:var(--body);font-size:.99rem;margin-bottom:24px}
@@ -222,6 +221,7 @@ img{max-width:100%;display:block}
   .has-sub>a::after{float:right}
   .about{grid-template-columns:1fr;gap:44px}.about-photo{order:-1}
   .worlds{grid-template-columns:1fr}
+  .brand img{height:62px}
 }
 @media(prefers-reduced-motion:reduce){
   *{transition:none!important;scroll-behavior:auto;animation:none!important}
@@ -343,7 +343,7 @@ img{max-width:100%;display:block}
     <div class="worlds">
 
       <article class="world reveal" id="umani">
-        <div class="badge"><img src="https://www.center-net.it/fp/wp-content/uploads/2026/04/snail-icon.png" alt=""></div>
+        <div class="w-rule"></div>
         <div class="label">Benessere umano</div>
         <h3>Per gli umani</h3>
         <p>Metodi dolci di riequilibrio energetico e percorsi di consapevolezza, per ritrovare equilibrio e ascolto di sé.</p>
@@ -360,7 +360,7 @@ img{max-width:100%;display:block}
       </article>
 
       <article class="world reveal d2" id="animali">
-        <div class="badge"><img src="https://www.center-net.it/fp/wp-content/uploads/2026/04/dog-icon.png" alt=""></div>
+        <div class="w-rule"></div>
         <div class="label">Benessere animale</div>
         <h3>Per gli animali</h3>
         <p>Educazione, comunicazione e cura del legame con i nostri compagni animali, per capirli nel profondo e costruire fiducia.</p>
